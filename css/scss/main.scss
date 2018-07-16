@@ -1,0 +1,176 @@
+@import 'reset';
+@import 'config';
+
+html{
+    background: #995d30;
+}
+body{
+    position: relative;
+    font-size: 0;
+}
+.backgroud{
+    background: url(../img/backgroud.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    padding-bottom: 100vh;
+    filter: blur(10px);
+}
+.hamburger-menu{
+    width: 10%;
+    background: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin: -17% 0% 6% 7%;
+    z-index: 999;
+    cursor: pointer;
+    & .icon-bar{
+        display: block;
+        width: 90%;
+        border: 6px solid #fff;
+        margin: 25% 0;
+    }
+    &.active {
+        display: none;
+    }
+}
+.menu {
+    width: 25%;
+    position: absolute;
+    top: 0%;
+    z-index: 999;
+    transform: translateX(-100%);
+    transition: 1s;
+    padding: 6% 3%;
+    &.active {
+        transform: translateX(0%);
+        transition: 1s;
+    }
+    ul{
+        width: 100%;
+        border-bottom: 3px solid #fff;
+        padding: 6% 0%;
+        text-align: center;
+        color: #fff;
+        font-weight: bold;
+        li{
+            width: 100%;
+            padding: 10% 0;
+            cursor: pointer;
+            span{
+                font-size: 30px;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .icon {
+                width: 20%;
+                padding-bottom: 20%;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 12%;
+                &-home{
+                    background: url(../img/home.png) no-repeat center;
+                    background-size: 100%;
+                }
+                &-user{
+                    background: url(../img/user.png) no-repeat center;
+                    background-size: 100%;
+                }
+                &-alarm{
+                    background: url(../img/alarm.png) no-repeat center;
+                    background-size: 100%;
+                }
+                &-question{
+                    background: url(../img/question.png) no-repeat center;
+                    background-size: 100%;
+                }
+                &-settings{
+                    background: url(../img/settings.png) no-repeat center;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}
+.logo {
+    background: url(../img/logo1.png) no-repeat;
+    background-size: 80%;
+    width: 50%;
+    padding-bottom: 25%;
+    margin: 15% 0% 15% 15%;
+    position: relative;
+    z-index: 500;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    &.active {
+        margin: 15% 0% 15% 32%;
+    }
+}
+.login {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 500;
+    cursor: pointer;
+    & .inputarea {
+        width: 85%;
+        margin: 11% auto;
+        ::placeholder{
+            color: #fff;
+            text-align: center;
+        }
+        & input{
+            box-sizing: border-box;
+            width: 100%;
+            background: transparent;
+            border-bottom: 6px solid #B6B328;
+            font-size: 40px;
+            padding: 3% 7%;
+            color: #fff;
+            font-weight: 600;
+            letter-spacing: 5px;
+            &:nth-last-of-type(1) {
+                margin-top: 38%;
+            }
+        }
+    }
+    & .button-login {
+        margin: 23% auto;
+        width: 50%;
+        & button {
+            font-size: 30px;
+            font-weight: bold;
+            letter-spacing: 10px;
+            margin: 0 auto;
+            width: 100%;
+            border-radius: 50px;
+            background: #B6B328;
+            color: #fff;
+            padding: 8% 12%;
+            cursor: pointer;
+        }
+    }
+    .information{
+        width: 85%;
+        margin: 8% auto;
+        font-size: 30px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 5px;
+        .newaccount{
+            span{
+                cursor: pointer;
+            }
+        }
+        .forgot{
+            margin-top: 1%;
+            span{
+                cursor: pointer;
+            }
+        }
+    }
+}
